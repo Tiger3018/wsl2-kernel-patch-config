@@ -1,0 +1,6 @@
+[submodule "MS-Kernel-5.15"]
+  path = kernel-5.15
+  url = https://github.com/microsoft/WSL2-Linux-Kernel
+[submodule "MS-Kernel-5.10"]
+  path = kernel-5.10
+  url = https://github.com/microsoft/WSL2-Linux-Kernel
