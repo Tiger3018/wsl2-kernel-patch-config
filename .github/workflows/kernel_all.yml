@@ -1,9 +1,13 @@
 name: Build Kernel (ALL)
 on:
   push:
-    branches: [master test]
+    branches: 
+      - master
+      - test
   pull_request:
-    branches: [master test]
+    branches:
+      - master
+      - test
   workflow_dispatch:
     inputs:
       any:
