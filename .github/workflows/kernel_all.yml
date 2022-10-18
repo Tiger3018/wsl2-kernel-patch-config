@@ -4,6 +4,12 @@ on:
     branches: [master test]
   pull_request:
     branches: [master test]
+  workflow_dispatch:
+    inputs:
+      any:
+        description: 'Any'
+        required: false
+        type: boolean
 jobs:
   build:
     runs-on: ubuntu-latest
