@@ -1,0 +1,588 @@
+10a11,12
+> CONFIG_CC_CAN_LINK=y
+> CONFIG_CC_CAN_LINK_STATIC=y
+747d748
+< # CONFIG_GCC_PLUGINS is not set
+897a899
+> CONFIG_FRAME_VECTOR=y
+1631a1634
+> # CONFIG_AD525X_DPOT is not set
+1635a1639
+> # CONFIG_ICS932S401 is not set
+1637a1642,1649
+> # CONFIG_APDS9802ALS is not set
+> # CONFIG_ISL29003 is not set
+> # CONFIG_ISL29020 is not set
+> # CONFIG_SENSORS_TSL2550 is not set
+> # CONFIG_SENSORS_BH1770 is not set
+> # CONFIG_SENSORS_APDS990X is not set
+> # CONFIG_HMC6352 is not set
+> # CONFIG_DS1682 is not set
+1646a1659,1661
+> # CONFIG_EEPROM_AT24 is not set
+> # CONFIG_EEPROM_LEGACY is not set
+> # CONFIG_EEPROM_MAX6875 is not set
+1647a1663,1664
+> # CONFIG_EEPROM_IDT_89HPESX is not set
+> # CONFIG_EEPROM_EE1004 is not set
+1657,1659c1674,1675
+< #
+< # Altera FPGA firmware download module (requires I2C)
+< #
+---
+> # CONFIG_SENSORS_LIS3_I2C is not set
+> # CONFIG_ALTERA_STAPL is not set
+1972c1988
+< # CONFIG_USB_NET_RNDIS_HOST is not set
+---
+> CONFIG_USB_NET_RNDIS_HOST=m
+2088a2105
+> # CONFIG_SERIAL_SC16IS7XX is not set
+2129c2146,2223
+< # CONFIG_I2C is not set
+---
+> CONFIG_I2C=y
+> CONFIG_ACPI_I2C_OPREGION=y
+> CONFIG_I2C_BOARDINFO=y
+> CONFIG_I2C_COMPAT=y
+> # CONFIG_I2C_CHARDEV is not set
+> CONFIG_I2C_MUX=y
+> 
+> #
+> # Multiplexer I2C Chip support
+> #
+> # CONFIG_I2C_MUX_LTC4306 is not set
+> # CONFIG_I2C_MUX_PCA9541 is not set
+> # CONFIG_I2C_MUX_REG is not set
+> # CONFIG_I2C_MUX_MLXCPLD is not set
+> # end of Multiplexer I2C Chip support
+> 
+> CONFIG_I2C_HELPER_AUTO=y
+> 
+> #
+> # I2C Hardware Bus support
+> #
+> 
+> #
+> # PC SMBus host controller drivers
+> #
+> # CONFIG_I2C_ALI1535 is not set
+> # CONFIG_I2C_ALI1563 is not set
+> # CONFIG_I2C_ALI15X3 is not set
+> # CONFIG_I2C_AMD756 is not set
+> # CONFIG_I2C_AMD8111 is not set
+> # CONFIG_I2C_AMD_MP2 is not set
+> # CONFIG_I2C_I801 is not set
+> # CONFIG_I2C_ISCH is not set
+> # CONFIG_I2C_ISMT is not set
+> # CONFIG_I2C_PIIX4 is not set
+> # CONFIG_I2C_NFORCE2 is not set
+> # CONFIG_I2C_NVIDIA_GPU is not set
+> # CONFIG_I2C_SIS5595 is not set
+> # CONFIG_I2C_SIS630 is not set
+> # CONFIG_I2C_SIS96X is not set
+> # CONFIG_I2C_VIA is not set
+> # CONFIG_I2C_VIAPRO is not set
+> 
+> #
+> # ACPI drivers
+> #
+> # CONFIG_I2C_SCMI is not set
+> 
+> #
+> # I2C system bus drivers (mostly embedded / system-on-chip)
+> #
+> # CONFIG_I2C_DESIGNWARE_PLATFORM is not set
+> # CONFIG_I2C_DESIGNWARE_PCI is not set
+> # CONFIG_I2C_EMEV2 is not set
+> # CONFIG_I2C_OCORES is not set
+> # CONFIG_I2C_PCA_PLATFORM is not set
+> # CONFIG_I2C_SIMTEC is not set
+> # CONFIG_I2C_XILINX is not set
+> 
+> #
+> # External I2C/SMBus adapter drivers
+> #
+> # CONFIG_I2C_DIOLAN_U2C is not set
+> # CONFIG_I2C_ROBOTFUZZ_OSIF is not set
+> # CONFIG_I2C_TAOS_EVM is not set
+> # CONFIG_I2C_TINY_USB is not set
+> 
+> #
+> # Other I2C/SMBus bus drivers
+> #
+> # CONFIG_I2C_MLXCPLD is not set
+> # end of I2C Hardware Bus support
+> 
+> # CONFIG_I2C_STUB is not set
+> # CONFIG_I2C_SLAVE is not set
+> # CONFIG_I2C_DEBUG_CORE is not set
+> # CONFIG_I2C_DEBUG_ALGO is not set
+> # CONFIG_I2C_DEBUG_BUS is not set
+2155a2250,2251
+> # CONFIG_CHARGER_ADP5061 is not set
+> # CONFIG_BATTERY_CW2015 is not set
+2157a2254,2256
+> # CONFIG_BATTERY_DS2782 is not set
+> # CONFIG_BATTERY_SBS is not set
+> # CONFIG_CHARGER_SBS is not set
+2158a2258,2260
+> # CONFIG_BATTERY_MAX17040 is not set
+> # CONFIG_BATTERY_MAX17042 is not set
+> # CONFIG_CHARGER_ISP1704 is not set
+2159a2262,2267
+> # CONFIG_CHARGER_LP8727 is not set
+> # CONFIG_CHARGER_BQ2415X is not set
+> # CONFIG_CHARGER_SMB347 is not set
+> # CONFIG_BATTERY_GAUGE_LTC2941 is not set
+> # CONFIG_BATTERY_RT5033 is not set
+> # CONFIG_CHARGER_BD99954 is not set
+2198a2307,2311
+> # CONFIG_MFD_AS3711 is not set
+> # CONFIG_PMIC_ADP5520 is not set
+> # CONFIG_MFD_BCM590XX is not set
+> # CONFIG_MFD_BD9571MWV is not set
+> # CONFIG_MFD_AXP20X_I2C is not set
+2199a2313,2318
+> # CONFIG_PMIC_DA903X is not set
+> # CONFIG_MFD_DA9052_I2C is not set
+> # CONFIG_MFD_DA9055 is not set
+> # CONFIG_MFD_DA9062 is not set
+> # CONFIG_MFD_DA9063 is not set
+> # CONFIG_MFD_DA9150 is not set
+2200a2320,2321
+> # CONFIG_MFD_MC13XXX_I2C is not set
+> # CONFIG_MFD_MP2629 is not set
+2206a2328
+> # CONFIG_MFD_IQS62X is not set
+2208a2331,2341
+> # CONFIG_MFD_88PM800 is not set
+> # CONFIG_MFD_88PM805 is not set
+> # CONFIG_MFD_88PM860X is not set
+> # CONFIG_MFD_MAX14577 is not set
+> # CONFIG_MFD_MAX77693 is not set
+> # CONFIG_MFD_MAX77843 is not set
+> # CONFIG_MFD_MAX8907 is not set
+> # CONFIG_MFD_MAX8925 is not set
+> # CONFIG_MFD_MAX8997 is not set
+> # CONFIG_MFD_MAX8998 is not set
+> # CONFIG_MFD_MT6360 is not set
+2209a2343
+> # CONFIG_MFD_MENF21BMC is not set
+2210a2345,2346
+> # CONFIG_MFD_RETU is not set
+> # CONFIG_MFD_PCF50633 is not set
+2211a2348,2351
+> # CONFIG_MFD_RT5033 is not set
+> # CONFIG_MFD_RC5T583 is not set
+> # CONFIG_MFD_SEC_CORE is not set
+> # CONFIG_MFD_SI476X_CORE is not set
+2212a2353
+> # CONFIG_MFD_SKY81452 is not set
+2215a2357,2372
+> # CONFIG_MFD_LP3943 is not set
+> # CONFIG_MFD_LP8788 is not set
+> # CONFIG_MFD_TI_LMU is not set
+> # CONFIG_MFD_PALMAS is not set
+> # CONFIG_TPS6105X is not set
+> # CONFIG_TPS6507X is not set
+> # CONFIG_MFD_TPS65086 is not set
+> # CONFIG_MFD_TPS65090 is not set
+> # CONFIG_MFD_TI_LP873X is not set
+> # CONFIG_MFD_TPS6586X is not set
+> # CONFIG_MFD_TPS65912_I2C is not set
+> # CONFIG_MFD_TPS80031 is not set
+> # CONFIG_TWL4030_CORE is not set
+> # CONFIG_TWL6040_CORE is not set
+> # CONFIG_MFD_WL1273_CORE is not set
+> # CONFIG_MFD_LM3533 is not set
+2217a2375,2379
+> # CONFIG_MFD_ARIZONA_I2C is not set
+> # CONFIG_MFD_WM8400 is not set
+> # CONFIG_MFD_WM831X_I2C is not set
+> # CONFIG_MFD_WM8350_I2C is not set
+> # CONFIG_MFD_WM8994 is not set
+2223c2385,2673
+< # CONFIG_MEDIA_SUPPORT is not set
+---
+> CONFIG_MEDIA_SUPPORT=y
+> CONFIG_MEDIA_SUPPORT_FILTER=y
+> CONFIG_MEDIA_SUBDRV_AUTOSELECT=y
+> 
+> #
+> # Media device types
+> #
+> CONFIG_MEDIA_CAMERA_SUPPORT=y
+> # CONFIG_MEDIA_ANALOG_TV_SUPPORT is not set
+> # CONFIG_MEDIA_DIGITAL_TV_SUPPORT is not set
+> # CONFIG_MEDIA_RADIO_SUPPORT is not set
+> # CONFIG_MEDIA_SDR_SUPPORT is not set
+> # CONFIG_MEDIA_PLATFORM_SUPPORT is not set
+> # CONFIG_MEDIA_TEST_SUPPORT is not set
+> # end of Media device types
+> 
+> CONFIG_VIDEO_DEV=y
+> CONFIG_MEDIA_CONTROLLER=y
+> 
+> #
+> # Video4Linux options
+> #
+> CONFIG_VIDEO_V4L2=y
+> CONFIG_VIDEO_V4L2_I2C=y
+> CONFIG_VIDEO_V4L2_SUBDEV_API=y
+> # CONFIG_VIDEO_ADV_DEBUG is not set
+> # CONFIG_VIDEO_FIXED_MINOR_RANGES is not set
+> # end of Video4Linux options
+> 
+> #
+> # Media controller options
+> #
+> # end of Media controller options
+> 
+> #
+> # Media drivers
+> #
+> 
+> #
+> # Drivers filtered as selected at 'Filter media drivers'
+> #
+> CONFIG_MEDIA_USB_SUPPORT=y
+> 
+> #
+> # Webcam devices
+> #
+> CONFIG_USB_VIDEO_CLASS=y
+> CONFIG_USB_VIDEO_CLASS_INPUT_EVDEV=y
+> CONFIG_USB_GSPCA=y
+> # CONFIG_USB_M5602 is not set
+> # CONFIG_USB_STV06XX is not set
+> # CONFIG_USB_GL860 is not set
+> # CONFIG_USB_GSPCA_BENQ is not set
+> # CONFIG_USB_GSPCA_CONEX is not set
+> # CONFIG_USB_GSPCA_CPIA1 is not set
+> # CONFIG_USB_GSPCA_DTCS033 is not set
+> # CONFIG_USB_GSPCA_ETOMS is not set
+> # CONFIG_USB_GSPCA_FINEPIX is not set
+> # CONFIG_USB_GSPCA_JEILINJ is not set
+> # CONFIG_USB_GSPCA_JL2005BCD is not set
+> # CONFIG_USB_GSPCA_KINECT is not set
+> # CONFIG_USB_GSPCA_KONICA is not set
+> # CONFIG_USB_GSPCA_MARS is not set
+> # CONFIG_USB_GSPCA_MR97310A is not set
+> # CONFIG_USB_GSPCA_NW80X is not set
+> # CONFIG_USB_GSPCA_OV519 is not set
+> # CONFIG_USB_GSPCA_OV534 is not set
+> # CONFIG_USB_GSPCA_OV534_9 is not set
+> # CONFIG_USB_GSPCA_PAC207 is not set
+> # CONFIG_USB_GSPCA_PAC7302 is not set
+> # CONFIG_USB_GSPCA_PAC7311 is not set
+> # CONFIG_USB_GSPCA_SE401 is not set
+> # CONFIG_USB_GSPCA_SN9C2028 is not set
+> # CONFIG_USB_GSPCA_SN9C20X is not set
+> # CONFIG_USB_GSPCA_SONIXB is not set
+> # CONFIG_USB_GSPCA_SONIXJ is not set
+> # CONFIG_USB_GSPCA_SPCA500 is not set
+> # CONFIG_USB_GSPCA_SPCA501 is not set
+> # CONFIG_USB_GSPCA_SPCA505 is not set
+> # CONFIG_USB_GSPCA_SPCA506 is not set
+> # CONFIG_USB_GSPCA_SPCA508 is not set
+> # CONFIG_USB_GSPCA_SPCA561 is not set
+> # CONFIG_USB_GSPCA_SPCA1528 is not set
+> # CONFIG_USB_GSPCA_SQ905 is not set
+> # CONFIG_USB_GSPCA_SQ905C is not set
+> # CONFIG_USB_GSPCA_SQ930X is not set
+> # CONFIG_USB_GSPCA_STK014 is not set
+> # CONFIG_USB_GSPCA_STK1135 is not set
+> # CONFIG_USB_GSPCA_STV0680 is not set
+> # CONFIG_USB_GSPCA_SUNPLUS is not set
+> # CONFIG_USB_GSPCA_T613 is not set
+> # CONFIG_USB_GSPCA_TOPRO is not set
+> # CONFIG_USB_GSPCA_TOUPTEK is not set
+> # CONFIG_USB_GSPCA_TV8532 is not set
+> # CONFIG_USB_GSPCA_VC032X is not set
+> # CONFIG_USB_GSPCA_VICAM is not set
+> # CONFIG_USB_GSPCA_XIRLINK_CIT is not set
+> # CONFIG_USB_GSPCA_ZC3XX is not set
+> # CONFIG_USB_PWC is not set
+> # CONFIG_VIDEO_CPIA2 is not set
+> # CONFIG_USB_ZR364XX is not set
+> # CONFIG_USB_STKWEBCAM is not set
+> # CONFIG_USB_S2255 is not set
+> 
+> #
+> # Webcam, TV (analog/digital) USB devices
+> #
+> # CONFIG_VIDEO_EM28XX is not set
+> # CONFIG_MEDIA_PCI_SUPPORT is not set
+> CONFIG_VIDEOBUF2_CORE=y
+> CONFIG_VIDEOBUF2_V4L2=y
+> CONFIG_VIDEOBUF2_MEMOPS=y
+> CONFIG_VIDEOBUF2_VMALLOC=y
+> # end of Media drivers
+> 
+> #
+> # Media ancillary drivers
+> #
+> 
+> #
+> # Audio decoders, processors and mixers
+> #
+> # CONFIG_VIDEO_TVAUDIO is not set
+> # CONFIG_VIDEO_TDA7432 is not set
+> # CONFIG_VIDEO_TDA9840 is not set
+> # CONFIG_VIDEO_TEA6415C is not set
+> # CONFIG_VIDEO_TEA6420 is not set
+> # CONFIG_VIDEO_MSP3400 is not set
+> # CONFIG_VIDEO_CS3308 is not set
+> # CONFIG_VIDEO_CS5345 is not set
+> # CONFIG_VIDEO_CS53L32A is not set
+> # CONFIG_VIDEO_TLV320AIC23B is not set
+> # CONFIG_VIDEO_UDA1342 is not set
+> # CONFIG_VIDEO_WM8775 is not set
+> # CONFIG_VIDEO_WM8739 is not set
+> # CONFIG_VIDEO_VP27SMPX is not set
+> # CONFIG_VIDEO_SONY_BTF_MPX is not set
+> # end of Audio decoders, processors and mixers
+> 
+> #
+> # RDS decoders
+> #
+> # CONFIG_VIDEO_SAA6588 is not set
+> # end of RDS decoders
+> 
+> #
+> # Video decoders
+> #
+> # CONFIG_VIDEO_ADV7183 is not set
+> # CONFIG_VIDEO_ADV7842 is not set
+> # CONFIG_VIDEO_BT819 is not set
+> # CONFIG_VIDEO_BT856 is not set
+> # CONFIG_VIDEO_BT866 is not set
+> # CONFIG_VIDEO_KS0127 is not set
+> # CONFIG_VIDEO_ML86V7667 is not set
+> # CONFIG_VIDEO_SAA7110 is not set
+> # CONFIG_VIDEO_SAA711X is not set
+> # CONFIG_VIDEO_TC358743 is not set
+> # CONFIG_VIDEO_TVP514X is not set
+> # CONFIG_VIDEO_TVP5150 is not set
+> # CONFIG_VIDEO_TVP7002 is not set
+> # CONFIG_VIDEO_TW2804 is not set
+> # CONFIG_VIDEO_TW9903 is not set
+> # CONFIG_VIDEO_TW9906 is not set
+> # CONFIG_VIDEO_TW9910 is not set
+> # CONFIG_VIDEO_VPX3220 is not set
+> 
+> #
+> # Video and audio decoders
+> #
+> # CONFIG_VIDEO_SAA717X is not set
+> # CONFIG_VIDEO_CX25840 is not set
+> # end of Video decoders
+> 
+> #
+> # Video encoders
+> #
+> # CONFIG_VIDEO_SAA7127 is not set
+> # CONFIG_VIDEO_SAA7185 is not set
+> # CONFIG_VIDEO_ADV7170 is not set
+> # CONFIG_VIDEO_ADV7175 is not set
+> # CONFIG_VIDEO_ADV7343 is not set
+> # CONFIG_VIDEO_ADV7393 is not set
+> # CONFIG_VIDEO_ADV7511 is not set
+> # CONFIG_VIDEO_AD9389B is not set
+> # CONFIG_VIDEO_AK881X is not set
+> # CONFIG_VIDEO_THS8200 is not set
+> # end of Video encoders
+> 
+> #
+> # Video improvement chips
+> #
+> # CONFIG_VIDEO_UPD64031A is not set
+> # CONFIG_VIDEO_UPD64083 is not set
+> # end of Video improvement chips
+> 
+> #
+> # Audio/Video compression chips
+> #
+> # CONFIG_VIDEO_SAA6752HS is not set
+> # end of Audio/Video compression chips
+> 
+> #
+> # SDR tuner chips
+> #
+> # end of SDR tuner chips
+> 
+> #
+> # Miscellaneous helper chips
+> #
+> # CONFIG_VIDEO_THS7303 is not set
+> # CONFIG_VIDEO_M52790 is not set
+> # CONFIG_VIDEO_I2C is not set
+> # CONFIG_VIDEO_ST_MIPID02 is not set
+> # end of Miscellaneous helper chips
+> 
+> #
+> # Camera sensor devices
+> #
+> # CONFIG_VIDEO_HI556 is not set
+> # CONFIG_VIDEO_IMX219 is not set
+> # CONFIG_VIDEO_IMX258 is not set
+> # CONFIG_VIDEO_IMX274 is not set
+> # CONFIG_VIDEO_IMX290 is not set
+> # CONFIG_VIDEO_IMX319 is not set
+> # CONFIG_VIDEO_IMX355 is not set
+> # CONFIG_VIDEO_OV2640 is not set
+> # CONFIG_VIDEO_OV2680 is not set
+> # CONFIG_VIDEO_OV2685 is not set
+> # CONFIG_VIDEO_OV2740 is not set
+> # CONFIG_VIDEO_OV5647 is not set
+> # CONFIG_VIDEO_OV6650 is not set
+> # CONFIG_VIDEO_OV5670 is not set
+> # CONFIG_VIDEO_OV5675 is not set
+> # CONFIG_VIDEO_OV5695 is not set
+> # CONFIG_VIDEO_OV7251 is not set
+> # CONFIG_VIDEO_OV772X is not set
+> # CONFIG_VIDEO_OV7640 is not set
+> # CONFIG_VIDEO_OV7670 is not set
+> # CONFIG_VIDEO_OV7740 is not set
+> # CONFIG_VIDEO_OV8856 is not set
+> # CONFIG_VIDEO_OV9640 is not set
+> # CONFIG_VIDEO_OV9650 is not set
+> # CONFIG_VIDEO_OV13858 is not set
+> # CONFIG_VIDEO_VS6624 is not set
+> # CONFIG_VIDEO_MT9M001 is not set
+> # CONFIG_VIDEO_MT9M032 is not set
+> # CONFIG_VIDEO_MT9M111 is not set
+> # CONFIG_VIDEO_MT9P031 is not set
+> # CONFIG_VIDEO_MT9T001 is not set
+> # CONFIG_VIDEO_MT9T112 is not set
+> # CONFIG_VIDEO_MT9V011 is not set
+> # CONFIG_VIDEO_MT9V032 is not set
+> # CONFIG_VIDEO_MT9V111 is not set
+> # CONFIG_VIDEO_SR030PC30 is not set
+> # CONFIG_VIDEO_NOON010PC30 is not set
+> # CONFIG_VIDEO_M5MOLS is not set
+> # CONFIG_VIDEO_RDACM20 is not set
+> # CONFIG_VIDEO_RJ54N1 is not set
+> # CONFIG_VIDEO_S5K6AA is not set
+> # CONFIG_VIDEO_S5K6A3 is not set
+> # CONFIG_VIDEO_S5K4ECGX is not set
+> # CONFIG_VIDEO_S5K5BAF is not set
+> # CONFIG_VIDEO_SMIAPP is not set
+> # CONFIG_VIDEO_ET8EK8 is not set
+> # end of Camera sensor devices
+> 
+> #
+> # Lens drivers
+> #
+> # CONFIG_VIDEO_AK7375 is not set
+> # CONFIG_VIDEO_DW9714 is not set
+> # CONFIG_VIDEO_DW9768 is not set
+> # CONFIG_VIDEO_DW9807_VCM is not set
+> # end of Lens drivers
+> 
+> #
+> # Flash devices
+> #
+> # CONFIG_VIDEO_ADP1653 is not set
+> # CONFIG_VIDEO_LM3560 is not set
+> # CONFIG_VIDEO_LM3646 is not set
+> # end of Flash devices
+> 
+> #
+> # SPI helper chips
+> #
+> # end of SPI helper chips
+> # end of Media ancillary drivers
+2361a2812,2817
+> # I2C HID support
+> #
+> # CONFIG_I2C_HID is not set
+> # end of I2C HID support
+> 
+> #
+2417c2873,2888
+< # CONFIG_USB_STORAGE is not set
+---
+> CONFIG_USB_STORAGE=m
+> # CONFIG_USB_STORAGE_DEBUG is not set
+> # CONFIG_USB_STORAGE_REALTEK is not set
+> # CONFIG_USB_STORAGE_DATAFAB is not set
+> # CONFIG_USB_STORAGE_FREECOM is not set
+> # CONFIG_USB_STORAGE_ISD200 is not set
+> # CONFIG_USB_STORAGE_USBAT is not set
+> # CONFIG_USB_STORAGE_SDDR09 is not set
+> # CONFIG_USB_STORAGE_SDDR55 is not set
+> # CONFIG_USB_STORAGE_JUMPSHOT is not set
+> # CONFIG_USB_STORAGE_ALAUDA is not set
+> # CONFIG_USB_STORAGE_ONETOUCH is not set
+> # CONFIG_USB_STORAGE_KARMA is not set
+> # CONFIG_USB_STORAGE_CYPRESS_ATACB is not set
+> # CONFIG_USB_STORAGE_ENE_UB6250 is not set
+> # CONFIG_USB_UAS is not set
+2516a2988,2990
+> # CONFIG_USB_HUB_USB251XB is not set
+> # CONFIG_USB_HSIC_USB3503 is not set
+> # CONFIG_USB_HSIC_USB4604 is not set
+2522c2996,2998
+< # CONFIG_NOP_USB_XCEIV is not set
+---
+> CONFIG_USB_PHY=y
+> CONFIG_NOP_USB_XCEIV=m
+> # CONFIG_USB_ISP1301 is not set
+2557a3034,3061
+> # CONFIG_RTC_DRV_ABB5ZES3 is not set
+> # CONFIG_RTC_DRV_ABEOZ9 is not set
+> # CONFIG_RTC_DRV_ABX80X is not set
+> # CONFIG_RTC_DRV_DS1307 is not set
+> # CONFIG_RTC_DRV_DS1374 is not set
+> # CONFIG_RTC_DRV_DS1672 is not set
+> # CONFIG_RTC_DRV_MAX6900 is not set
+> # CONFIG_RTC_DRV_RS5C372 is not set
+> # CONFIG_RTC_DRV_ISL1208 is not set
+> # CONFIG_RTC_DRV_ISL12022 is not set
+> # CONFIG_RTC_DRV_X1205 is not set
+> # CONFIG_RTC_DRV_PCF8523 is not set
+> # CONFIG_RTC_DRV_PCF85063 is not set
+> # CONFIG_RTC_DRV_PCF85363 is not set
+> # CONFIG_RTC_DRV_PCF8563 is not set
+> # CONFIG_RTC_DRV_PCF8583 is not set
+> # CONFIG_RTC_DRV_M41T80 is not set
+> # CONFIG_RTC_DRV_BQ32K is not set
+> # CONFIG_RTC_DRV_S35390A is not set
+> # CONFIG_RTC_DRV_FM3130 is not set
+> # CONFIG_RTC_DRV_RX8010 is not set
+> # CONFIG_RTC_DRV_RX8581 is not set
+> # CONFIG_RTC_DRV_RX8025 is not set
+> # CONFIG_RTC_DRV_EM3027 is not set
+> # CONFIG_RTC_DRV_RV3028 is not set
+> # CONFIG_RTC_DRV_RV3032 is not set
+> # CONFIG_RTC_DRV_RV8803 is not set
+> # CONFIG_RTC_DRV_SD3078 is not set
+2561a3066
+> CONFIG_RTC_I2C_AND_SPI=y
+2565a3071,3073
+> # CONFIG_RTC_DRV_DS3232 is not set
+> # CONFIG_RTC_DRV_PCF2127 is not set
+> # CONFIG_RTC_DRV_RV3029C2 is not set
+2671a3180,3185
+> # CONFIG_COMMON_CLK_MAX9485 is not set
+> # CONFIG_COMMON_CLK_SI5341 is not set
+> # CONFIG_COMMON_CLK_SI5351 is not set
+> # CONFIG_COMMON_CLK_SI544 is not set
+> # CONFIG_COMMON_CLK_CDCE706 is not set
+> # CONFIG_COMMON_CLK_CS2000_CP is not set
+2765c3279,3286
+< # CONFIG_EXTCON is not set
+---
+> CONFIG_EXTCON=y
+> 
+> #
+> # Extcon Device Drivers
+> #
+> # CONFIG_EXTCON_FSA9480 is not set
+> # CONFIG_EXTCON_RT8973A is not set
+> # CONFIG_EXTCON_SM5502 is not set
+3376a3898,3899
+> # CONFIG_CRYPTO_DEV_ATMEL_ECC is not set
+> # CONFIG_CRYPTO_DEV_ATMEL_SHA204A is not set
