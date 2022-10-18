@@ -1,6 +1,6 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-apt-get update && apt-get install build-essential flex bison dwarves libssl-dev libelf-dev
+sudo apt-get update && sudo apt-get install build-essential flex bison dwarves libssl-dev libelf-dev
 
 patch kernel-5.10/Microsoft/config-wsl usb_cam-5.10.patch
 
