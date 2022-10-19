@@ -36,7 +36,7 @@ jobs:
       with:
         name: kernel-image
         path: |
-          build/
+          checkout/build/
           !*.tmp*
     - name: Generate Release Tag
       id: tag
@@ -48,6 +48,6 @@ jobs:
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         files: |
-          build/vmlinux
-          build/vmlinuz
-          build/bzImage
+          checkout/build/vmlinux
+          checkout/build/vmlinuz
+          checkout/build/bzImage
