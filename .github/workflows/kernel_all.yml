@@ -37,9 +37,8 @@ jobs:
         name: kernel-image
         path: |
           checkout/build/
-          !*.tmp*
-    - name: Generate Release Tag
-      id: tag
+    - name: Generate Release Tag (Rename)
+      id: tag_rename
       run: |
         # https://github.com/softprops/action-gh-release/issues/20
         if [ ${{ github.event.inputs.ReleaseTag != '' }} ]; then
@@ -47,11 +46,20 @@ jobs:
         else
           echo "release_tag=nightly_$(date +'%Y.%m.%d_%H.%M')" >> $GITHUB_OUTPUT
         fi
+        mv checkout/build/arch/x86/boot/compressed/vmlinux checkout/build/arch/x86/boot/compressed/vmlinuz
+        tar cf modules.tar modules.order modules-only.symvers -T modules.order
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         files: |
+          # https://unix.stackexchange.com/a/482978
           checkout/build/vmlinux
-          checkout/build/vmlinuz
-          checkout/build/bzImage
+          checkout/build/vmlinux.symvers
+          checkout/build/modules.builtin
+          checkout/build/modules.order
+          checkout/build/modules-only.symvers
+          checkout/build/modules.tar # id: tag_rename
+          checkout/build/usr/initramfs_inc_data
+          checkout/build/arch/x86/boot/compressed/vmlinuz # id: tag_rename
+          checkout/build/arch/x86/boot/bzImage

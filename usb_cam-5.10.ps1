@@ -83,6 +83,7 @@ function Install-ByWinGet {
     }
 }
 
+Write-Host "[+] Host"$Version.ps", Windows Build"$Version.windows.version
 Write-Host "[+] I will probably use $MSStoreApiHost, $GithubCdnHost and $GithubAssetsCdnHost for better connection in specific location."
 Check-Install-WinGet
 Install-ByWinGet "usbipd-win"
@@ -99,4 +100,4 @@ Try {
 Catch {
 }
 $HomeDirectory = $HomeDirectory.Replace("\", "\\")
-"[wsl2]`r`nkernel=$HomeDirectory\\bzImage" | Out-File .wslconfig
+"[wsl2]`r`nkernel=$HomeDirectory\\bzImage" | Out-File .wslconfig -Encoding ascii # Prevent BOM in default Powershell Windows
