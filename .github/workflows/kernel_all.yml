@@ -34,9 +34,15 @@ jobs:
     - name: Upload Artifact (Tar)
       uses: alehechka/upload-tartifact@v1
       with:
-        name: kernel-image
+        name: kernel-build
         path: |
           checkout/build/
+    - name: Upload Artifact (Tar)
+      uses: alehechka/upload-tartifact@v1
+      with:
+        name: kernel-image
+        path: |
+          checkout/fakeroot/
     - name: Generate Release Tag (Rename)
       id: tag_rename
       run: |
