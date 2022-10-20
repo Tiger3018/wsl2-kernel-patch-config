@@ -4,14 +4,18 @@ sudo apt-get update && sudo apt-get install build-essential flex bison dwarves l
 
 patch kernel-5.10/Microsoft/config-wsl usb_cam-5.10.patch
 
-mkdir -p build fakeroot
+mkdir -p build fakeroot/boot
 
 pushd kernel-5.10
-    INSTALL_PATH=../fakeroot \
-        make all KCONFIG_CONFIG=Microsoft/config-wsl O=../build -j$(getconf _NPROCESSORS_ONLN)
+    make all KCONFIG_CONFIG=Microsoft/config-wsl O=../build V=1 -j$(getconf _NPROCESSORS_ONLN)
+    # make dtbs_install INSTALL_PATH=../fakeroot V=1
+    cp arch/x86/boot/bzImage ../fakeroot/boot/
+    cp System.map ../fakeroot/boot/
+    make modules_install INSTALL_MOD_PATH=../fakeroot V=1
+    make headers_install INSTALL_HDR_PATH=../fakeroot/usr V=1
 popd
 shopt -s globstar
 pushd build
-    ls **/.tmp*
-    rm -f **/.tmp*
+    ls .tmp* .btf*
+    rm -f .tmp* .btf*
 popd

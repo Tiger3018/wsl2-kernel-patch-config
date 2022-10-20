@@ -52,8 +52,10 @@ jobs:
         else
           echo "release_tag=nightly_$(date +'%Y.%m.%d_%H.%M')" >> $GITHUB_OUTPUT
         fi
-        mv checkout/build/arch/x86/boot/compressed/vmlinux checkout/build/arch/x86/boot/compressed/vmlinuz
-        tar cf modules.tar modules.order modules-only.symvers -T modules.order
+        pushd checkout/build
+          mv arch/x86/boot/compressed/vmlinux arch/x86/boot/compressed/vmlinuz
+          tar cf modules.tar modules.order modules-only.symvers -T modules.order
+        popd
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
@@ -62,6 +64,7 @@ jobs:
           # https://unix.stackexchange.com/a/482978
           checkout/build/vmlinux
           checkout/build/vmlinux.symvers
+          checkout/build/System.map
           checkout/build/modules.builtin
           checkout/build/modules.order
           checkout/build/modules-only.symvers
