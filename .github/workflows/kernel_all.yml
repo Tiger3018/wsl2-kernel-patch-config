@@ -43,8 +43,8 @@ jobs:
         name: kernel-image
         path: |
           checkout/fakeroot/
-    - name: Generate Release Tag (Rename)
-      id: tag_rename
+    - name: Prepare to Release 
+      id: prepare_release
       run: |
         # https://github.com/softprops/action-gh-release/issues/20
         if [ ${{ github.event.inputs.ReleaseTag != '' }} ]; then
@@ -59,7 +59,7 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: ${{ steps.tag.outputs.release_tag }}
+        tag_name: ${{ steps.prepare_release.outputs.release_tag }}
         files: |
           # https://unix.stackexchange.com/a/482978
           checkout/build/vmlinux
